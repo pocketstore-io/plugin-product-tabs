@@ -12,8 +12,7 @@
       <CatalogTabDescription/>
     </div>
 
-<MediaSlider :product="props.identifier" />
-
+    <MediaSlider :product="props.identifier" />
 
     <input
         type="radio"
