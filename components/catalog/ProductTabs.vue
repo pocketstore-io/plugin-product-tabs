@@ -9,7 +9,7 @@
         aria-label="Beschreibung"
     />
     <div class="tab-content bg-base-100 p-5 md:p-10">
-      <CatalogTabDescription/>
+      <CatalogTabDescription :product="props.identifier"/>
     </div>
 
     <MediaSlider :product="props.identifier" />
