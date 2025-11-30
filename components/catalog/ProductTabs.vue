@@ -70,7 +70,7 @@
 import {useRoute} from "vue-router";
 import Review from "../catalog/Review.vue";
 import {usePocketBase} from "~/utils/pocketbase";
-import ImageSlider from "~/components/ImageSlider.vue";
+import ImageSlider from "~/components/content/ImageSlider.vue";
 
 const pb = usePocketBase();
 const route = useRoute();
