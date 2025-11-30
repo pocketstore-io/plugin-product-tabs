@@ -12,17 +12,8 @@
       <CatalogTabDescription/>
     </div>
 
-    <input
-        type="radio"
-        name="my_tabs_2"
-        class="tab"
-        @click="selected = 'pictures'"
-        :checked="selected == 'pictures'"
-        aria-label="Fotos"
-    />
-    <div class="tab-content bg-base-100 p-10">
-      <ImageSlider :images="images"></ImageSlider>
-    </div>
+<MediaSlider :product="props.identifier" />
+
 
     <input
         type="radio"
@@ -70,7 +61,7 @@
 import {useRoute} from "vue-router";
 import Review from "../catalog/Review.vue";
 import {usePocketBase} from "~/utils/pocketbase";
-import ImageSlider from "~/components/content/ImageSlider.vue";
+import MediaSlider from "./tab/MediaSlider.vue";
 
 const pb = usePocketBase();
 const route = useRoute();
@@ -82,11 +73,6 @@ const props = defineProps({
 const reviews = ref([]);
 
 const selected = ref("description");
-const images = [
-  {media: 'https://image.tmdb.org/t/p/original/ah3m5E28pE4vsFnNvoTTdVxxT3B.jpg'},
-  {media: 'https://image.tmdb.org/t/p/original/6U17IFhOo7omnuD2mrFQIaHx82B.jpg'},
-  {media: 'https://image.tmdb.org/t/p/original/ebg8TF2vYaSVNVLv8WO8omebrjw.jpg'},
-]
 
 onMounted(async () => {
   reviews.value = (
