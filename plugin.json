@@ -2,5 +2,8 @@
   "vendor": "pocketstore-io",
   "name": "product-tabs",
   "type": "plugin",
-  "prio": 90
+  "prio": 90,
+  "requirements": [
+    "github.com/pocketstore-io/plugin-image-slider"
+  ]
 }
