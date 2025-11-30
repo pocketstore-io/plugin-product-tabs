@@ -22,7 +22,7 @@ const pb = usePocketBase();
 const images = ref([]);
 
 watch(() => props.product, async () => {
-  images.value = await pb.collection('product_pictures').getFullList({
+  images.value = await pb.collection('product_pictures').getList(1,10,{
     filter: 'product="' + props.product + '"'
   })
 });
