@@ -70,8 +70,7 @@
 import {useRoute} from "vue-router";
 import Review from "../catalog/Review.vue";
 import {usePocketBase} from "~/utils/pocketbase";
-import {useLocalStorage} from "@vueuse/core";
-import Carousel from "./tab/Carousel.vue";
+import ImageSlider from "~/components/ImageSlider.vue";
 
 const pb = usePocketBase();
 const route = useRoute();
