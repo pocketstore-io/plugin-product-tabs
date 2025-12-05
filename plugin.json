@@ -4,6 +4,7 @@
   "type": "plugin",
   "prio": 90,
   "requirements": [
-    "github.com/pocketstore-io/plugin-image-slider"
+    "github.com/pocketstore-io/plugin-image-slider",
+    "github.com/pocketstore-io/plugin-reviews"
   ]
 }
