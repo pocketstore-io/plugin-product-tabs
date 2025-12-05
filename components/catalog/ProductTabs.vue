@@ -23,12 +23,12 @@
         @click="selected = 'reviews'"
     />
     <div class="tab-content border-base-300 bg-base-100 p-10">
-      <Review
+      <Reviews
           v-for="review in reviews"
           :key="review.id"
           :identifier="review.id"
       />
-      <CatalogReviewForm/>
+      <ReviewsForm/>
     </div>
 
     <input
@@ -58,7 +58,7 @@
 </template>
 <script lang="ts" setup>
 import {useRoute} from "vue-router";
-import Review from "../catalog/Review.vue";
+import Reviews from "@/components/reviews/View.vue";
 import {usePocketBase} from "~/utils/pocketbase";
 import MediaSlider from "./tab/MediaSlider.vue";
 
