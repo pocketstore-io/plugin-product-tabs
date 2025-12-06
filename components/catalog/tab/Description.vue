@@ -12,6 +12,8 @@ const props = defineProps({
 })
 
 watch(() => props.product, async () => {
-  blocks.value = (await pb.collection('product_blocks').getList(1, 10)).items;
+  blocks.value = (await pb.collection('product_blocks').getList(1, 10, {
+    filter: 'product="' + props.product + '"'
+  })).items;
 })
 </script>
